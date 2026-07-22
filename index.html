@@ -724,6 +724,39 @@
 </div>
 
 
+<!--
+  Shown instead of #authScreen when the user arrives via a password-reset email link
+  (a Supabase "recovery" session). Lets them actually set a new password rather than
+  just being logged in via the recovery link. See js-auth.js.
+-->
+<div id="resetScreen" class="auth-screen hidden">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <span class="bolt" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#fff"/></svg>
+      </span>
+      <div>
+        <div class="brand-name">Job Dispatch</div>
+        <div class="brand-sub">Service request analyzer</div>
+      </div>
+    </div>
+    <h2>Choose a new password</h2>
+    <div id="resetMessage" class="auth-message hidden"></div>
+    <form id="resetForm">
+      <div class="form-group">
+        <label for="resetPassword">New password</label>
+        <input type="password" id="resetPassword" autocomplete="new-password" required minlength="6">
+      </div>
+      <div class="form-group">
+        <label for="resetPasswordConfirm">Confirm new password</label>
+        <input type="password" id="resetPasswordConfirm" autocomplete="new-password" required minlength="6">
+      </div>
+      <button type="submit" class="btn btn-primary" id="resetSubmitBtn" style="width:100%;justify-content:center;margin-top:6px">Set new password</button>
+    </form>
+  </div>
+</div>
+
+
 <div class="app-shell hidden">
 
 
